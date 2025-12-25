@@ -3,7 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicole Jolie | AI Trust Signal Audit</title>
+    <title>Nicole Jolie | AI Trust Signal Audit & Strategist</title>
+    <meta name="description" content="AI Strategist Nicole Jolie helps B2B companies recover lost revenue by fixing broken trust signals that prevent ChatGPT and Perplexity from recommending them.">
+
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nicole Jolie",
+        "jobTitle": ["AI Strategist", "AI Consultant"],
+        "url": "https://meetnicolejolie.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/nicolejolie/",
+          "https://www.youtube.com/@NicolesAIJourney",
+          "https://www.tiktok.com/@nicolejolieishere?lang=en",
+          "https://substack.com/@nicolejolie"
+        ],
+        "knowsAbout": ["AI Trust Signals", "B2B Revenue Recovery", "LLM Visibility", "AI Strategy"],
+        "description": "Specialized AI Strategist helping high-value B2B services get recommended by AI models."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "AI Trust Signal Audit",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Nicole Jolie"
+        },
+        "description": "A 90-minute audit delivery session providing the exact breakdown of trust signal inconsistencies and a 3-step fix.",
+        "offers": {
+          "@type": "Offer",
+          "description": "Revenue recovery for B2B engagements valued between $100k and $2M+"
+        }
+      }
+    ]
+    </script>
+
     <style>
         :root {
             --light-bg: #ffffff;
@@ -11,44 +47,92 @@
             --text-dark: #1e293b;
             --text-light: #f8fafc;
             --accent: #2563eb;
+            --footer-bg: #020617;
         }
-        body { font-family: 'Inter', sans-serif; margin: 0; color: var(--text-dark); line-height: 1.6; }
+
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', -apple-system, sans-serif; 
+            margin: 0; 
+            color: var(--text-dark); 
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        section { padding: 80px 0; }
+        section { padding: 100px 0; }
+        
+        /* Layout Utilities */
         .bg-dark { background-color: var(--dark-bg); color: var(--text-light); }
         .bg-light { background-color: var(--light-bg); }
-        h1, h2, h3 { line-height: 1.2; }
-        img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
-        .cta-button { background: var(--accent); color: white; padding: 18px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
-        .responsive-graphic-box { text-align: center; margin: 40px 0; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+        .text-center { text-align: center; }
+        
+        h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 30px; }
+        h2 { font-size: 2.25rem; font-weight: 700; margin-bottom: 25px; }
+        h3 { font-size: 1.75rem; margin-bottom: 20px; }
+        
+        p { font-size: 1.25rem; margin-bottom: 25px; opacity: 0.9; }
+        
+        .cta-button { 
+            background: var(--accent); 
+            color: white; 
+            padding: 20px 40px; 
+            border-radius: 12px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.4); }
+
+        .responsive-graphic-box { margin: 60px 0; border-radius: 12px; overflow: hidden; }
+        img { width: 100%; height: auto; display: block; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        
+        .scenario-card { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
+        .scenario-card h4 { margin-top: 0; font-size: 1.4rem; color: #60a5fa; }
+        .scenario-card ul { padding-left: 20px; margin: 0; }
+
+        /* Footer */
+        footer { background: var(--footer-bg); color: #94a3b8; padding: 80px 20px 40px; border-top: 1px solid #1e293b; }
+        .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 30px; margin-bottom: 40px; }
+        .footer-nav a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+        .footer-nav a:hover { color: white; }
+        .copyright { font-size: 0.85rem; border-top: 1px solid #1e293b; padding-top: 30px; }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; gap: 40px; }
+            section { padding: 60px 0; }
+        }
     </style>
 </head>
 <body>
 
-    <section class="bg-light">
-        <div class="container">
+    <header class="bg-light">
+        <div class="container text-center">
             <div class="responsive-graphic-box">
-                <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/header_image_meetnj_desktop.png" alt="Nicole Jolie | AI Strategy & Consulting">
+                <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/header_image_meetnj_desktop.png" alt="Nicole Jolie | AI Strategy & Consulting - The Invisible Revenue Leak">
             </div>
-            [cite_start]<h1>If AI Recommends Your Competitor Instead of You, $250,000 Moves to Someone Else Before Your Phone Ever Rings [cite: 1, 2, 3]</h1>
-            <p>You have no idea it happened. No call. No email. [cite_start]No chance to compete. [cite: 4, 5]</p>
-            <p>A decision maker searched for exactly what you do. ChatGPT or Perplexity recommended three companies. [cite_start]You were not one of them. [cite: 6, 7]</p>
+            <h1>If AI Recommends Your Competitor Instead of You, $250,000 Moves to Someone Else Before Your Phone Ever Rings</h1>
+            <p>You have no idea it happened. No call. No email. No chance to compete.</p>
+            <p>A decision maker searched for exactly what you do. ChatGPT or Perplexity recommended three companies. You were not one of them.</p>
         </div>
-    </section>
+    </header>
 
     <section class="bg-dark">
         <div class="container">
-            <h2>This is not a marketing problem. [cite_start]This is a revenue problem. [cite: 9]</h2>
-            [cite_start]<p>The New Reality: AI Decides Who Gets Recommended Before Humans Ever See Your Website [cite: 10]</p>
             <div class="grid">
                 <div>
-                    <p>When a CFO searches "lithium extraction partners for battery manufacturing"... the AI does not show ten blue links. [cite_start]It recommends two or three names. [cite: 11, 12]</p>
-                    [cite_start]<p>If your trust signals are inconsistent across the web, AI skips you. [cite: 13]</p>
+                    <h2>This is not a marketing problem. This is a revenue problem.</h2>
+                    <p><strong>The New Reality:</strong> AI Decides Who Gets Recommended Before Humans Ever See Your Website</p>
+                    <p>When a CFO searches "lithium extraction partners for battery manufacturing" or a fund manager searches "commercial lending for renewable energy projects" in ChatGPT, the AI does not show ten blue links. It recommends two or three names.</p>
+                    <p>If your trust signals are inconsistent across the web, AI skips you. It does not gamble on recommending someone who might be credible. It picks the safe choice: Your competitor.</p>
                 </div>
                 <div class="responsive-graphic-box">
-                    <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+2-+What+One+Miss+Deal+Costs.png" alt="What One Missed Deal Costs">
+                    <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+2-+What+One+Missed+Deal+Costs.png" alt="What One Missed Deal Costs">
                 </div>
             </div>
         </div>
@@ -56,93 +140,106 @@
 
     <section class="bg-light">
         <div class="container">
-            [cite_start]<h3>What This Costs You in Actual Dollars [cite: 17]</h3>
+            <h2 class="text-center">What This Costs You in Actual Dollars</h2>
+            <div class="grid">
+                <div class="scenario-card" style="background: #f1f5f9; color: var(--text-dark); border: 1px solid #e2e8f0;">
+                    <h4>Commercial Insurance Brokerage</h4>
+                    <ul>
+                        <li>Average policy value: $150,000</li>
+                        <li>Qualified searches per month: 80</li>
+                        <li>Monthly revenue if invisible: $0</li>
+                        <li>Monthly revenue if recommended: $300,000</li>
+                    </ul>
+                </div>
+                <div class="scenario-card" style="background: #f1f5f9; color: var(--text-dark); border: 1px solid #e2e8f0;">
+                    <h4>Specialized Industrial Services</h4>
+                    <ul>
+                        <li>Average project value: $2,000,000</li>
+                        <li>Decision makers researching monthly: 15</li>
+                        <li>Quarterly revenue if invisible: $0</li>
+                        <li>Quarterly revenue if recommended: $4,500,000</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark">
+        <div class="container text-center">
+            <h2>Why AI Is Not Recommending You</h2>
+            <p>(And It Has Nothing to Do With Your Track Record)</p>
+            <div class="responsive-graphic-box">
+                <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+3-+Trust+Signal+Breakdown+-+Before+%26+After.png" alt="Trust Signal Alignment Breakdown">
+            </div>
+            <p>AI systems check one thing: Trust signal alignment. If your website, LinkedIn, and case studies show three different stories, AI moves on. Your competitor gets the deal because their story is consistent.</p>
+        </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="container">
+            <h2 class="text-center">The Difference Between Fixing This and Staying Invisible</h2>
+            <div class="responsive-graphic-box">
+                <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+4-+The+Cost+Comparison+Table.png" alt="Comparison of VP Marketing vs Agency vs Audit">
+            </div>
+            <div class="text-center">
+                <p><strong>Option 4: Stay Invisible</strong> - Revenue lost per year: $1,200,000 to $6,000,000</p>
+                <a href="https://calendly.com/your-exploratory-link" class="cta-button">Book Your 30-Minute Exploratory Call</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark">
+        <div class="container">
+            <h2 class="text-center">What the AI Trust Signal Audit Actually Shows You</h2>
+            <div class="responsive-graphic-box">
+                <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+5+-+Trust+Signal+Gaps+the+invisible+revenue+leak.png" alt="The 3-Step Fix Process">
+            </div>
             <div class="grid">
                 <div>
-                    <strong>Scenario 1: Commercial Insurance Brokerage</strong>
-                    <ul>
-                        [cite_start]<li>Average policy value: $150,000 [cite: 20]</li>
-                        [cite_start]<li>Monthly revenue if invisible: $0 [cite: 24]</li>
-                        [cite_start]<li>Monthly revenue if recommended: $300,000 [cite: 25]</li>
-                    </ul>
+                    <h3>The 90-Minute Audit Walkthrough</h3>
+                    <p>We spend 90 minutes on a call. I walk through your current trust signals and show you exactly where they break down. You walk away with a three-step action plan to fix your AI visibility this week.</p>
                 </div>
                 <div>
-                    <strong>Scenario 3: Specialized Industrial Services</strong>
-                    <ul>
-                        [cite_start]<li>Average project value: $2,000,000 [cite: 36]</li>
-                        [cite_start]<li>Quarterly revenue if recommended: $4,500,000 [cite: 41]</li>
-                    </ul>
+                    <ol>
+                        <li><strong>Step 1: The Trust Signal Breakdown</strong> - Specific sources and inconsistencies.</li>
+                        <li><strong>Step 2: The Competitor Comparison</strong> - Why AI picks them over you.</li>
+                        <li><strong>Step 3: The Fix</strong> - The exact changes to make on LinkedIn and your website.</li>
+                    </ol>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-dark">
+    <section class="bg-light text-center">
         <div class="container">
-            [cite_start]<h2>Why AI Is Not Recommending You [cite: 52]</h2>
-            [cite_start]<p>AI systems like ChatGPT check one thing: Trust signal alignment. [cite: 53]</p>
-            <div class="responsive-graphic-box">
-                <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+3-+Trust+Signal+Breakdown+-+Before+%26+After.png" alt="Trust Signal Breakdown">
+            <h2>Fix it this week, or watch another $250,000 move to someone else next month.</h2>
+            <p>First deal that comes through because AI recommended you pays for the entire audit.</p>
+            <a href="https://calendly.com/your-exploratory-link" class="cta-button">[Book Your AI Trust Signal Audit]</a>
+            <hr style="margin: 60px 0 20px; border: 0; border-top: 1px solid #eee;">
+            <p style="font-size: 0.8em; color: #666;">CITATIONS & SOURCES: Gartner, McKinsey, Bain & Company, and industry benchmarks.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <div class="footer-nav">
+                <a href="affiliate-disclaimer.html">Affiliate Disclaimer</a>
+                <a href="anti-class-action.html">Anti-Class Action Provision</a>
+                <a href="dmca-policy.html">DMCA Policy</a>
+                <a href="earnings-results-disclaimer.html">Earnings & Results Disclaimer</a>
+                <a href="gdpr-ccpa-policy.html">GDPR & CCPA Policy</a>
+                <a href="legal-disclaimer.html">Legal Disclaimer</a>
+                <a href="optin-agreement.html">Optin Agreement</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="refund-policy.html">Refund Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="testimonial-disclaimer.html">Testimonial Disclaimer</a>
             </div>
-            [cite_start]<p>If your messaging is consistent across your website, LinkedIn, and industry publications, AI sees you as credible. [cite: 55, 56]</p>
-        </div>
-    </section>
-
-    <section class="bg-light">
-        <div class="container">
-            [cite_start]<h2>The Difference Between Hiring Someone to Fix This and Staying Invisible [cite: 71]</h2>
-            <div class="responsive-graphic-box">
-                <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+4-+The+Cost+Comparison+Table.png" alt="Cost Comparison Table">
+            <div class="copyright">
+                &copy; 2025 Worthy of Success LLC. All rights reserved.
             </div>
-            [cite_start]<p>Option 4: Stay Invisible - Revenue lost per year: $1,200,000 to $6,000,000 [cite: 88, 91]</p>
-            [cite_start]<a href="#" class="cta-button">[Book Your AI Trust Signal Audit] [cite: 142]</a>
         </div>
-    </section>
+    </footer>
 
-    <section class="bg-dark">
-        <div class="container">
-            [cite_start]<h2>The 3-Step Action Plan [cite: 100]</h2>
-            <div class="responsive-graphic-box">
-                <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+5+-+Trust+Signal+Gaps+the+invisible+revenue+leak.png" alt="3-Step Process">
-            </div>
-            <ol>
-                [cite_start]<li><strong>The Trust Signal Breakdown:</strong> Where messaging contradicts itself. [cite: 101, 102]</li>
-                [cite_start]<li><strong>The Competitor Comparison:</strong> What companies AI recommends instead. [cite: 104, 105]</li>
-                [cite_start]<li><strong>The Fix:</strong> Exact changes for your website and LinkedIn. [cite: 108, 109]</li>
-            </ol>
-        </div>
-    </section>
-
-    <section class="bg-light" style="text-align: center;">
-        <div class="container">
-            [cite_start]<h2>Fix it this week, or watch another $250,000 move to someone else next month. [cite: 148]</h2>
-            [cite_start]<a href="#" class="cta-button">[Book Your AI Trust Signal Audit] [cite: 149]</a>
-            <hr>
-            [cite_start]<p style="font-size: 0.8em; color: #666;">CITATIONS & SOURCES: Gartner, McKinsey, Bain & Company, and industry benchmarks. [cite: 152]</p>
-        </div>
-    </section>
-
-<footer>
-    <div class="footer-nav">
-        <a href="affiliate-disclaimer.html">Affiliate Disclaimer</a>
-        <a href="anti-class-action.html">Anti-Class Action Provision</a>
-        <a href="dmca-policy.html">DMCA Policy</a>
-        <a href="earnings-results-disclaimer.html">Earnings & Results Disclaimer</a>
-        <a href="gdpr-ccpa-policy.html">GDPR & CCPA Policy</a>
-        <a href="legal-disclaimer.html">Legal Disclaimer</a>
-        <a href="optin-agreement.html">Optin Agreement</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="refund-policy.html">Refund Policy</a>
-        <a href="terms-of-service.html">Terms of Service</a>
-        <a href="testimonial-disclaimer.html">Testimonial Disclaimer</a>
-    </div>
-    <div class="copyright-notice">
-        &copy; 2025 Worthy of Success LLC. All rights reserved.
-    </div>
-</footer>
-
-</body>
-</html>
-    
 </body>
 </html>
