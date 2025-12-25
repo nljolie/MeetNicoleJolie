@@ -4,7 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicole Jolie | AI Trust Signal Audit & Strategist</title>
-    
+    <meta name="description" content="AI Strategist Nicole Jolie helps B2B companies recover lost revenue by fixing broken trust signals that prevent ChatGPT and Perplexity from recommending them.">
+
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nicole Jolie",
+        "jobTitle": ["AI Strategist", "AI Consultant"],
+        "url": "https://meetnicolejolie.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/nicolejolie/",
+          "https://www.youtube.com/@NicolesAIJourney",
+          "https://www.tiktok.com/@nicolejolieishere",
+          "https://substack.com/@nicolejolie"
+        ],
+        "knowsAbout": ["AI Trust Signals", "B2B Revenue Recovery", "LLM Visibility", "AI Strategy"],
+        "description": "Specialized AI Strategist helping high-value B2B services get recommended by AI models."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "AI Trust Signal Audit",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Nicole Jolie"
+        },
+        "description": "A 90-minute audit delivery session providing the exact breakdown of trust signal inconsistencies and a 3-step fix.",
+        "offers": {
+          "@type": "Offer",
+          "description": "Revenue recovery for B2B engagements valued between $100k and $2M+"
+        }
+      }
+    ]
+    </script>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=EB+Garamond&display=swap');
 
@@ -12,7 +47,8 @@
             --dark-blue: #001524;
             --teal: #15616d;
             --cream: #ffecd1;
-            --deep-orange: #78290f;
+            --orange: #ff7d00;
+            --sienna: #78290f;
         }
 
         * { box-sizing: border-box; }
@@ -21,30 +57,32 @@
             margin: 0; 
             color: var(--dark-blue); 
             line-height: 1.6;
+            background-color: #ffffff;
         }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
-        /* Top Hero: Two Containers */
+        /* Two-Column Hero Split */
         header { padding: 60px 0; background-color: #ffffff; }
         .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
         
-        h1 { font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 30px; text-transform: uppercase; }
-        h2 { font-family: 'Montserrat', sans-serif; font-size: 2.25rem; font-weight: 700; margin-bottom: 25px; text-transform: uppercase; }
-        h3 { font-family: 'Montserrat', sans-serif; font-size: 1.75rem; margin-bottom: 20px; text-transform: uppercase; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; text-transform: uppercase; color: var(--dark-blue); }
+        h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 30px; }
+        h2 { font-size: 2.25rem; font-weight: 700; margin-bottom: 25px; }
         
         p { font-size: 1.35rem; margin-bottom: 25px; }
         
-        /* Section Partitioning */
+        /* Section Partitions */
         .section-dark { padding: 100px 0; background-color: var(--dark-blue); color: var(--cream); }
         .section-dark h2, .section-dark p { color: var(--cream); }
         .section-light { padding: 100px 0; background-color: #ffffff; }
         
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 
+        /* Orange to Sienna Buttons */
         .cta-button { 
-            background: var(--teal); 
-            color: var(--cream); 
+            background: var(--orange); 
+            color: #ffffff; 
             padding: 22px 45px; 
             border-radius: 4px; 
             text-decoration: none; 
@@ -53,14 +91,23 @@
             text-transform: uppercase;
             font-size: 1.1rem;
             display: inline-block;
-            transition: 0.3s;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .cta-button:hover { background: var(--deep-orange); transform: translateY(-2px); }
+        .cta-button:hover { 
+            background: var(--sienna); 
+            transform: translateY(-2px); 
+        }
 
         .responsive-img { width: 100%; height: auto; border-radius: 4px; display: block; }
 
-        .scenario-card { background: #f1f5f9; padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; color: var(--dark-blue); }
-        .scenario-card h4 { font-family: 'Montserrat', sans-serif; margin-top: 0; color: var(--teal); }
+        .scenario-card { 
+            background: #f1f5f9; 
+            padding: 30px; 
+            border-radius: 12px; 
+            border: 1px solid #e2e8f0; 
+            color: var(--dark-blue);
+        }
+        .scenario-card h4 { margin-top: 0; color: var(--teal); }
 
         sup { font-size: 0.6em; color: var(--teal); font-weight: bold; vertical-align: super; }
         .data-sources { padding: 40px 0; border-top: 1px solid #eee; font-size: 1rem; color: #666; }
@@ -69,6 +116,7 @@
         footer { background: var(--teal); color: var(--cream); padding: 80px 20px 40px; text-align: center; }
         .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px 25px; margin-bottom: 40px; }
         .footer-nav a { color: var(--cream); text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.8rem; text-transform: uppercase; }
+        .footer-nav a:hover { text-decoration: underline; }
         .copyright { font-size: 0.85rem; border-top: 1px solid rgba(255, 236, 209, 0.2); padding-top: 30px; font-family: 'Montserrat', sans-serif; }
 
         @media (max-width: 768px) { .hero-grid, .grid { grid-template-columns: 1fr; text-align: center; } }
@@ -86,7 +134,7 @@
                     <a href="https://calendar.app.google/TMJ3Uycj8d8MzgmF8" class="cta-button">Book Your 30-Minute Exploratory Call</a>
                 </div>
                 <div>
-                    <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/header_image_meetnj_desktop.png" alt="Nicole Jolie" class="responsive-img">
+                    <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/header_image_meetnj_desktop.png" alt="Nicole Jolie AI Strategist" class="responsive-img">
                 </div>
             </div>
         </div>
@@ -146,7 +194,7 @@
     <section class="section-light">
         <div class="container">
             <h2 class="text-center">The Difference Between Fixing This and Staying Invisible</h2>
-            <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+4-+The+Cost+Comparison+Table.png" alt="Cost Comparison" class="responsive-img" style="max-width: 900px; margin: 0 auto 40px;">
+            <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+4-+The+Cost+Comparison+Table.png" alt="Cost Comparison Table" class="responsive-img" style="max-width: 900px; margin: 0 auto 40px;">
             <div class="text-center">
                 <p><strong>Option 4: Stay Invisible</strong> - Revenue lost per year: $1,200,000 to $6,000,000</p>
                 <a href="https://calendar.app.google/TMJ3Uycj8d8MzgmF8" class="cta-button">Book Your 30-Minute Exploratory Call</a>
@@ -157,7 +205,7 @@
     <section class="section-dark">
         <div class="container">
             <h2 class="text-center">What the AI Trust Signal Audit Actually Shows You</h2>
-            <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+5+-+Trust+Signal+Gaps+the+invisible+revenue+leak.png" alt="The 3-Step Fix Process" class="responsive-img" style="max-width: 800px; margin: 0 auto 60px;">
+            <img src="https://meetnicolejolie.s3.us-east-2.amazonaws.com/Graphic+5+-+Trust+Signal+Gaps+the+invisible+revenue+leak.png" alt="Trust Signal Fix Process" class="responsive-img" style="max-width: 800px; margin: 0 auto 60px;">
             <div class="grid">
                 <div>
                     <h3>The 90-Minute Audit Walkthrough</h3>
