@@ -1,34 +1,46 @@
-/* =====================================================
-   MEETNICOLEJOLIE.COM - STYLES.CSS
-   High-End B2B Landing Page for AI Trust Signal Audit
-   ===================================================== */
+/* ==========================================================================
+   MEETNICOLEJOLIE.COM - PREMIUM B2B LANDING PAGE
+   AI Trust Signal Audit
+   ========================================================================== */
 
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=EB+Garamond:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
-/* =====================================================
-   1. CSS RESET & BASE STYLES
-   ===================================================== */
+/* ==========================================================================
+   CSS VARIABLES
+   ========================================================================== */
+:root {
+    --navy: #001524;
+    --teal: #15616d;
+    --cream: #ffecd1;
+    --white: #ffffff;
+    --orange: #ff6b35;
+    --orange-hover: #e55a2b;
+    --gray-light: #f8f9fa;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'EB Garamond', Georgia, serif;
+}
 
-* {
+/* ==========================================================================
+   RESET & BASE
+   ========================================================================== */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'EB Garamond', serif;
-    font-size: 1.125rem; /* 18px */
+    font-family: var(--font-body);
+    font-size: 1.2rem;
     line-height: 1.7;
-    color: #001524; /* Dark Navy */
-    background-color: #ffffff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    color: var(--navy);
+    background: var(--white);
+    padding-top: 80px;
 }
 
 img {
@@ -37,302 +49,395 @@ img {
     display: block;
 }
 
-/* =====================================================
-   2. TYPOGRAPHY
-   ===================================================== */
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
     line-height: 1.2;
-    color: #001524;
-    margin-bottom: 1.5rem;
+    color: var(--navy);
 }
 
 h1 {
-    font-size: 3.5rem; /* 56px */
-    letter-spacing: -0.02em;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
-    font-size: 2.5rem; /* 40px */
-    letter-spacing: -0.01em;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
 }
 
 h3 {
-    font-size: 1.75rem; /* 28px */
+    font-size: 1.4rem;
     font-weight: 700;
-}
-
-h4 {
-    font-size: 1.375rem; /* 22px */
-    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 p {
-    margin-bottom: 1.5rem;
-    max-width: 680px;
+    margin-bottom: 1.25rem;
 }
 
 strong {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 a {
-    color: #15616d; /* Teal */
+    color: var(--teal);
     text-decoration: none;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-a:hover {
-    opacity: 0.8;
-}
-
-/* =====================================================
-   3. LAYOUT & CONTAINER
-   ===================================================== */
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section {
-    padding: 80px 0;
-}
-
-.section-light {
-    background-color: #ffffff;
-}
-
-.section-cream {
-    background-color: #ffecd1; /* Cream */
-}
-
-.text-center {
+.center {
     text-align: center;
 }
 
-.text-center p {
-    margin-left: auto;
-    margin-right: auto;
+.emphasis {
+    font-size: 1.3rem;
+    margin-top: 2rem;
 }
 
-/* =====================================================
-   4. HEADER
-   ===================================================== */
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
 
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
 header {
-    background-color: #ffffff;
-    border-bottom: 1px solid rgba(0, 21, 36, 0.1);
-    padding: 20px 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 21, 36, 0.05);
+    background: var(--white);
+    box-shadow: 0 2px 20px rgba(0, 21, 36, 0.08);
+    padding: 0 40px;
 }
 
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
 }
 
 .logo {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 900;
-    color: #001524;
+    color: var(--navy);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
 }
 
-.nav-menu {
+.logo:hover {
+    color: var(--navy);
+}
+
+header nav {
     display: flex;
-    gap: 40px;
     align-items: center;
-    list-style: none;
+    gap: 40px;
 }
 
-.nav-menu a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.875rem;
-    font-weight: 700;
+header nav a {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #001524;
-    transition: color 0.3s ease;
+    letter-spacing: 0.04em;
 }
 
-.nav-menu a:hover {
-    color: #15616d;
-    opacity: 1;
+header nav a:hover {
+    color: var(--teal);
 }
 
-/* =====================================================
-   5. BUTTONS
-   ===================================================== */
-
-.btn {
+/* ==========================================================================
+   CTA BUTTONS - ORANGE
+   ========================================================================== */
+.btn-cta {
     display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
+    background: var(--orange) !important;
+    color: var(--white) !important;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 18px 40px;
+    padding: 14px 28px;
     border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
     transition: all 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-    border: none;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
-.btn-primary {
-    background-color: #15616d; /* Teal */
-    color: #ffffff;
-}
-
-.btn-primary:hover {
-    background-color: #0d3d44;
-    opacity: 1;
+.btn-cta:hover {
+    background: var(--orange-hover) !important;
+    color: var(--white) !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(21, 97, 109, 0.3);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
 }
 
-.btn-large {
-    font-size: 1.25rem;
-    padding: 24px 60px;
+.btn-cta.btn-large {
+    font-size: 1.1rem;
+    padding: 20px 40px;
+    margin-top: 2rem;
 }
 
-.btn-header {
-    font-size: 0.875rem;
-    padding: 12px 28px;
+.btn-cta.btn-white {
+    background: var(--white) !important;
+    color: var(--orange) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* =====================================================
-   6. HERO SECTION
-   ===================================================== */
+.btn-cta.btn-white:hover {
+    background: var(--cream) !important;
+    color: var(--orange-hover) !important;
+}
 
+/* ==========================================================================
+   SECTIONS - ALTERNATING BACKGROUNDS
+   ========================================================================== */
 .hero {
-    padding: 100px 0 80px 0;
-    background-color: #ffffff;
+    padding: 80px 0 100px;
+    background: linear-gradient(180deg, var(--white) 0%, #f8f9fa 100%);
 }
 
-.hero h1 {
-    max-width: 900px;
-    margin: 0 auto 30px auto;
+.section-light {
+    padding: 100px 0;
+    background: var(--white);
 }
 
-.hero-subtitle {
-    font-size: 1.375rem;
+.section-dark {
+    padding: 100px 0;
+    background: var(--navy);
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark p,
+.section-dark li,
+.section-dark strong {
+    color: var(--white);
+}
+
+.section-cta {
+    padding: 100px 0;
+    background: var(--navy);
+}
+
+.section-cta h2,
+.section-cta p,
+.section-cta strong {
+    color: var(--white);
+}
+
+.section-citations {
+    padding: 60px 0;
+    background: var(--gray-light);
+}
+
+.section-citations h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.section-citations p,
+.section-citations li {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.section-citations ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.section-citations li {
+    padding: 0.3rem 0;
+}
+
+.section-citations li::before {
+    content: "•";
+    color: var(--teal);
+    margin-right: 0.75rem;
+}
+
+/* ==========================================================================
+   TWO COLUMN LAYOUT
+   ========================================================================== */
+.two-col {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.two-col.reverse {
+    grid-template-columns: 45% 55%;
+}
+
+.two-col.reverse .col-graphic {
+    order: -1;
+}
+
+.col-content {
+    /* Text column */
+}
+
+.col-graphic img {
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 21, 36, 0.15);
+}
+
+.section-dark .col-graphic img {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.empty-col {
+    /* Intentionally empty for layout balance */
+}
+
+.content-block {
     max-width: 800px;
-    margin: 0 auto 40px auto;
-    color: #001524;
-    opacity: 0.85;
-}
-
-.hero-cta {
-    margin: 50px 0 60px 0;
-}
-
-.hero-image {
-    margin: 60px auto 0 auto;
-    max-width: 1000px;
-    border-radius: 8px;
-    box-shadow: 0 20px 60px rgba(0, 21, 36, 0.1);
-}
-
-/* =====================================================
-   7. CONTENT SECTIONS
-   ===================================================== */
-
-.content-section {
-    max-width: 900px;
     margin: 0 auto;
 }
 
-.content-section h2 {
-    margin-bottom: 40px;
+.subtitle {
+    font-size: 1.3rem;
+    color: #444;
+    line-height: 1.8;
 }
 
-.content-section p:last-child {
-    margin-bottom: 0;
-}
-
-/* Scenario Boxes */
-.scenarios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    margin: 60px 0;
-}
-
+/* ==========================================================================
+   SCENARIO BOXES
+   ========================================================================== */
 .scenario-box {
-    background-color: #ffecd1; /* Cream */
-    padding: 40px 30px;
+    background: rgba(21, 97, 109, 0.05);
+    border-left: 4px solid var(--teal);
+    padding: 30px;
     border-radius: 8px;
-    border-left: 4px solid #15616d; /* Teal accent */
+    margin-bottom: 30px;
 }
 
 .scenario-box h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #001524;
+    color: var(--navy);
+    margin-bottom: 1rem;
 }
 
 .scenario-box p {
     font-size: 1rem;
-    line-height: 1.6;
-    max-width: 100%;
+    margin-bottom: 0.5rem;
 }
 
-.scenario-dollar {
-    font-family: 'Montserrat', sans-serif;
+.dollar-highlight {
+    display: block;
+    font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 900;
-    color: #15616d;
-    margin: 20px 0;
-    display: block;
+    color: var(--orange);
+    margin: 1rem 0;
 }
 
-/* =====================================================
-   8. GRAPHICS & IMAGES
-   ===================================================== */
+/* ==========================================================================
+   EXAMPLE COMPARISON BOXES
+   ========================================================================== */
+.example-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 60px 0;
+}
 
+.example-box {
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.example-bad {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 107, 53, 0.5);
+}
+
+.example-good {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid var(--teal);
+}
+
+.example-box h3 {
+    margin-bottom: 1.5rem;
+}
+
+.example-box p {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+}
+
+.example-box .result {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.result.bad {
+    color: var(--orange);
+}
+
+.result.good {
+    color: #4ade80;
+}
+
+/* ==========================================================================
+   GRAPHIC CONTAINER
+   ========================================================================== */
 .graphic-container {
-    margin: 60px auto;
-    max-width: 1000px;
-}
-
-.graphic-full {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0, 21, 36, 0.08);
-}
-
-/* =====================================================
-   9. COMPARISON TABLES
-   ===================================================== */
-
-.comparison-table {
-    background-color: #ffecd1;
-    padding: 50px 40px;
-    border-radius: 8px;
-    margin: 60px auto;
     max-width: 900px;
+    margin: 40px auto;
+}
+
+.graphic-container img {
+    border-radius: 12px;
+    box-shadow: 0 15px 50px rgba(0, 21, 36, 0.12);
+}
+
+/* ==========================================================================
+   COMPARISON TABLE
+   ========================================================================== */
+.comparison-table {
+    max-width: 900px;
+    margin: 40px auto 0;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 21, 36, 0.1);
 }
 
 .comparison-row {
     display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    gap: 30px;
-    padding: 30px 0;
-    border-bottom: 1px solid rgba(0, 21, 36, 0.1);
+    grid-template-columns: 2fr 1.2fr 3fr;
+    gap: 20px;
+    padding: 20px 30px;
+    border-bottom: 1px solid #eee;
     align-items: center;
 }
 
@@ -340,260 +445,251 @@ header {
     border-bottom: none;
 }
 
-.comparison-row.highlight {
-    background-color: rgba(21, 97, 109, 0.08);
-    padding: 40px 30px;
-    border-radius: 6px;
-    border: 2px solid #15616d;
+.header-row {
+    background: var(--navy);
+}
+
+.header-row .option-name,
+.header-row .option-cost,
+.header-row .option-result {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--white);
 }
 
 .option-name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.125rem;
+    font-family: var(--font-heading);
     font-weight: 700;
-    color: #001524;
+    font-size: 1rem;
+    color: var(--navy);
 }
 
 .option-cost {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #15616d;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--teal);
     text-align: center;
 }
 
 .option-result {
-    font-size: 1rem;
-    color: #001524;
+    font-size: 0.95rem;
+    color: #555;
 }
 
-/* =====================================================
-   10. QUALIFICATION SECTION (For You / Not For You)
-   ===================================================== */
+.comparison-row.danger {
+    background: #fef2f2;
+}
 
-.qualification-grid {
+.comparison-row.danger .option-cost {
+    color: #dc2626;
+}
+
+.comparison-row.highlight {
+    background: linear-gradient(135deg, rgba(21, 97, 109, 0.08) 0%, rgba(255, 107, 53, 0.08) 100%);
+    border: 2px solid var(--teal);
+}
+
+.comparison-row.highlight .option-name {
+    color: var(--teal);
+}
+
+.comparison-row.highlight .option-cost {
+    color: var(--orange);
+    font-size: 1.2rem;
+}
+
+.comparison-row.highlight .option-result {
+    color: var(--navy);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   STEP ITEMS
+   ========================================================================== */
+.step-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.step-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.step-item h3 {
+    color: var(--cream);
+}
+
+/* ==========================================================================
+   QUALIFICATION BOXES
+   ========================================================================== */
+.qual-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin: 60px auto;
-    max-width: 1000px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }
 
 .qual-box {
     padding: 50px 40px;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .qual-for {
-    background-color: rgba(21, 97, 109, 0.05);
-    border: 2px solid #15616d;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid var(--teal);
 }
 
 .qual-not {
-    background-color: rgba(0, 21, 36, 0.03);
-    border: 2px solid rgba(0, 21, 36, 0.2);
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .qual-box h3 {
-    font-size: 1.75rem;
-    margin-bottom: 30px;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.qual-for h3 {
+    color: var(--cream);
+}
+
+.qual-not h3 {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .qual-box ul {
     list-style: none;
-    padding: 0;
 }
 
 .qual-box li {
-    padding: 12px 0 12px 35px;
+    padding: 0.75rem 0 0.75rem 2rem;
     position: relative;
-    font-size: 1.125rem;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    line-height: 1.5;
 }
 
-.qual-box li:before {
-    content: "✓";
+.qual-box li::before {
     position: absolute;
     left: 0;
     font-weight: 900;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 }
 
-.qual-for li:before {
-    color: #15616d;
+.qual-for li::before {
+    content: "✓";
+    color: var(--teal);
 }
 
-.qual-not li:before {
+.qual-not li::before {
     content: "✗";
-    color: #001524;
-    opacity: 0.4;
+    color: rgba(255, 255, 255, 0.4);
 }
 
-/* =====================================================
-   11. FAQ SECTION
-   ===================================================== */
-
-.faq-section {
-    background-color: #ffecd1;
-    padding: 100px 0;
-}
-
-.faq-container {
+/* ==========================================================================
+   FAQ SECTION
+   ========================================================================== */
+.faq-list {
     max-width: 900px;
-    margin: 0 auto;
-}
-
-.faq-section h2 {
-    text-align: center;
-    margin-bottom: 60px;
+    margin: 60px auto 0;
 }
 
 .faq-item {
-    background-color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
     padding: 40px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    border-left: 4px solid #15616d;
-    box-shadow: 0 4px 20px rgba(0, 21, 36, 0.06);
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--teal);
 }
 
 .faq-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #001524;
+    font-size: 1.25rem;
+    color: var(--cream);
+    margin-bottom: 1.25rem;
 }
 
 .faq-item p {
-    font-size: 1.125rem;
-    line-height: 1.7;
-    max-width: 100%;
-    margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
 }
 
 .faq-item p:last-child {
     margin-bottom: 0;
 }
 
-/* =====================================================
-   12. FINAL CTA SECTION
-   ===================================================== */
-
-.final-cta {
-    background-color: #001524; /* Dark Navy */
-    color: #ffffff;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.final-cta h2 {
-    color: #ffffff;
-    max-width: 800px;
-    margin: 0 auto 30px auto;
-}
-
-.final-cta p {
-    color: #ffecd1; /* Cream */
-    font-size: 1.25rem;
-    max-width: 700px;
-    margin: 0 auto 50px auto;
-}
-
-.final-cta .btn-primary {
-    background-color: #15616d;
-}
-
-.final-cta .btn-primary:hover {
-    background-color: #0d3d44;
-}
-
-/* =====================================================
-   13. FOOTER (Using Nicole's Exact Styles)
-   ===================================================== */
-
+/* ==========================================================================
+   FOOTER - TEAL BG, CREAM TEXT, ORANGE LINKS
+   ========================================================================== */
 footer {
-    background-color: #15616d; /* Teal Background */
-    color: #ffecd1;            /* Cream Text */
-    padding: 60px 20px;
+    background: var(--teal);
+    padding: 60px 40px;
     text-align: center;
-    margin-top: 0;
-    font-family: 'EB Garamond', serif;
 }
 
 .footer-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px 25px;
-    max-width: 1100px;
-    margin: 0 auto 40px auto;
+    gap: 12px 25px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 236, 209, 0.2);
 }
 
 .footer-nav a {
-    color: #ffecd1;
-    text-decoration: none;
-    font-size: 14px;
-    transition: opacity 0.3s;
+    color: var(--orange) !important;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
 }
 
 .footer-nav a:hover {
+    color: var(--white) !important;
     text-decoration: underline;
-    opacity: 0.8;
 }
 
 .copyright {
-    font-size: 13px;
-    border-top: 1px solid rgba(255, 236, 209, 0.2);
-    padding-top: 20px;
-    margin-top: 20px;
-    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+    color: var(--cream);
+    opacity: 0.8;
 }
 
-/* =====================================================
-   14. CITATIONS
-   ===================================================== */
-
-.citations {
-    background-color: #f8f8f8;
-    padding: 60px 0;
-    font-size: 0.875rem;
-    color: #001524;
-    opacity: 0.7;
-}
-
-.citations h3 {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.citations ul {
-    list-style: none;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.citations li {
-    padding: 8px 0;
-    line-height: 1.6;
-}
-
-/* =====================================================
-   15. RESPONSIVE DESIGN
-   ===================================================== */
-
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
 @media (max-width: 1024px) {
-    h1 {
-        font-size: 2.75rem; /* 44px */
+    .two-col,
+    .two-col.reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
     
-    h2 {
-        font-size: 2rem; /* 32px */
+    .two-col.reverse .col-graphic {
+        order: 0;
+    }
+    
+    .col-graphic {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .example-comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .qual-grid {
+        grid-template-columns: 1fr;
     }
     
     .comparison-row {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 10px;
         text-align: center;
     }
     
@@ -603,103 +699,108 @@ footer {
 }
 
 @media (max-width: 768px) {
-    html {
-        font-size: 15px;
-    }
-    
     body {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        padding-top: 70px;
     }
     
     h1 {
-        font-size: 2.25rem; /* 36px */
+        font-size: 2.2rem;
     }
     
     h2 {
-        font-size: 1.75rem; /* 28px */
+        font-size: 1.9rem;
     }
     
-    .section {
-        padding: 60px 0;
+    .container {
+        padding: 0 20px;
+    }
+    
+    header {
+        padding: 0 20px;
+    }
+    
+    .header-container {
+        height: 70px;
+    }
+    
+    header nav {
+        gap: 15px;
+    }
+    
+    header nav a:not(.btn-cta) {
+        display: none;
+    }
+    
+    .btn-cta {
+        padding: 12px 20px;
+        font-size: 0.8rem;
     }
     
     .hero {
-        padding: 60px 0 40px 0;
+        padding: 50px 0 70px;
     }
     
-    .nav-menu {
-        gap: 20px;
-        font-size: 0.75rem;
+    .section-light,
+    .section-dark,
+    .section-cta {
+        padding: 70px 0;
     }
     
-    .btn-header {
-        display: none; /* Hide header CTA on mobile, use sticky bottom CTA instead */
+    .scenario-box {
+        padding: 25px 20px;
     }
     
-    .scenarios-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .qual-box {
+        padding: 35px 25px;
     }
     
-    .qualification-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .scenario-box,
-    .qual-box,
     .faq-item {
         padding: 30px 25px;
     }
     
-    .btn-large {
-        font-size: 1.125rem;
-        padding: 20px 40px;
+    .example-box {
+        padding: 30px 25px;
     }
     
     .comparison-table {
-        padding: 30px 20px;
+        margin: 20px auto 0;
+    }
+    
+    .comparison-row {
+        padding: 15px 20px;
+    }
+    
+    footer {
+        padding: 50px 20px;
+    }
+    
+    .footer-nav {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.875rem; /* 30px */
+        font-size: 1.8rem;
     }
     
-    .hero-subtitle {
-        font-size: 1.125rem;
+    h2 {
+        font-size: 1.6rem;
     }
     
-    .logo {
-        font-size: 1.25rem;
+    .btn-cta.btn-large {
+        width: 100%;
+        text-align: center;
+        padding: 18px 30px;
     }
     
-    .nav-menu {
-        gap: 15px;
-    }
-    
-    .btn {
-        padding: 16px 30px;
+    .dollar-highlight {
+        font-size: 2rem;
     }
 }
 
-/* =====================================================
-   16. UTILITY CLASSES
-   ===================================================== */
-
-.mt-40 {
-    margin-top: 40px;
-}
-
-.mt-60 {
-    margin-top: 60px;
-}
-
-.mb-40 {
-    margin-bottom: 40px;
-}
-
-.mb-60 {
-    margin-bottom: 60px;
-}
+/* ==========================================================================
+   END OF STYLESHEET
+   ========================================================================== */
