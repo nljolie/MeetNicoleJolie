@@ -1,0 +1,705 @@
+/* =====================================================
+   MEETNICOLEJOLIE.COM - STYLES.CSS
+   High-End B2B Landing Page for AI Trust Signal Audit
+   ===================================================== */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=EB+Garamond:wght@400;500;600&display=swap');
+
+/* =====================================================
+   1. CSS RESET & BASE STYLES
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.7;
+    color: #001524; /* Dark Navy */
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =====================================================
+   2. TYPOGRAPHY
+   ===================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #001524;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 3.5rem; /* 56px */
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 2.5rem; /* 40px */
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: 1.75rem; /* 28px */
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.375rem; /* 22px */
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    max-width: 680px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+a {
+    color: #15616d; /* Teal */
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* =====================================================
+   3. LAYOUT & CONTAINER
+   ===================================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-light {
+    background-color: #ffffff;
+}
+
+.section-cream {
+    background-color: #ffecd1; /* Cream */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-center p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =====================================================
+   4. HEADER
+   ===================================================== */
+
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 21, 36, 0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 21, 36, 0.05);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #001524;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-menu a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #001524;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #15616d;
+    opacity: 1;
+}
+
+/* =====================================================
+   5. BUTTONS
+   ===================================================== */
+
+.btn {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 18px 40px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #15616d; /* Teal */
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #0d3d44;
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(21, 97, 109, 0.3);
+}
+
+.btn-large {
+    font-size: 1.25rem;
+    padding: 24px 60px;
+}
+
+.btn-header {
+    font-size: 0.875rem;
+    padding: 12px 28px;
+}
+
+/* =====================================================
+   6. HERO SECTION
+   ===================================================== */
+
+.hero {
+    padding: 100px 0 80px 0;
+    background-color: #ffffff;
+}
+
+.hero h1 {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+.hero-subtitle {
+    font-size: 1.375rem;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    color: #001524;
+    opacity: 0.85;
+}
+
+.hero-cta {
+    margin: 50px 0 60px 0;
+}
+
+.hero-image {
+    margin: 60px auto 0 auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 21, 36, 0.1);
+}
+
+/* =====================================================
+   7. CONTENT SECTIONS
+   ===================================================== */
+
+.content-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-section h2 {
+    margin-bottom: 40px;
+}
+
+.content-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Scenario Boxes */
+.scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin: 60px 0;
+}
+
+.scenario-box {
+    background-color: #ffecd1; /* Cream */
+    padding: 40px 30px;
+    border-radius: 8px;
+    border-left: 4px solid #15616d; /* Teal accent */
+}
+
+.scenario-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #001524;
+}
+
+.scenario-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 100%;
+}
+
+.scenario-dollar {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #15616d;
+    margin: 20px 0;
+    display: block;
+}
+
+/* =====================================================
+   8. GRAPHICS & IMAGES
+   ===================================================== */
+
+.graphic-container {
+    margin: 60px auto;
+    max-width: 1000px;
+}
+
+.graphic-full {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 21, 36, 0.08);
+}
+
+/* =====================================================
+   9. COMPARISON TABLES
+   ===================================================== */
+
+.comparison-table {
+    background-color: #ffecd1;
+    padding: 50px 40px;
+    border-radius: 8px;
+    margin: 60px auto;
+    max-width: 900px;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 30px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(0, 21, 36, 0.1);
+    align-items: center;
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-row.highlight {
+    background-color: rgba(21, 97, 109, 0.08);
+    padding: 40px 30px;
+    border-radius: 6px;
+    border: 2px solid #15616d;
+}
+
+.option-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #001524;
+}
+
+.option-cost {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #15616d;
+    text-align: center;
+}
+
+.option-result {
+    font-size: 1rem;
+    color: #001524;
+}
+
+/* =====================================================
+   10. QUALIFICATION SECTION (For You / Not For You)
+   ===================================================== */
+
+.qualification-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 60px auto;
+    max-width: 1000px;
+}
+
+.qual-box {
+    padding: 50px 40px;
+    border-radius: 8px;
+}
+
+.qual-for {
+    background-color: rgba(21, 97, 109, 0.05);
+    border: 2px solid #15616d;
+}
+
+.qual-not {
+    background-color: rgba(0, 21, 36, 0.03);
+    border: 2px solid rgba(0, 21, 36, 0.2);
+}
+
+.qual-box h3 {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+}
+
+.qual-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.qual-box li {
+    padding: 12px 0 12px 35px;
+    position: relative;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.qual-box li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+
+.qual-for li:before {
+    color: #15616d;
+}
+
+.qual-not li:before {
+    content: "✗";
+    color: #001524;
+    opacity: 0.4;
+}
+
+/* =====================================================
+   11. FAQ SECTION
+   ===================================================== */
+
+.faq-section {
+    background-color: #ffecd1;
+    padding: 100px 0;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #15616d;
+    box-shadow: 0 4px 20px rgba(0, 21, 36, 0.06);
+}
+
+.faq-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #001524;
+}
+
+.faq-item p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.faq-item p:last-child {
+    margin-bottom: 0;
+}
+
+/* =====================================================
+   12. FINAL CTA SECTION
+   ===================================================== */
+
+.final-cta {
+    background-color: #001524; /* Dark Navy */
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.final-cta h2 {
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.final-cta p {
+    color: #ffecd1; /* Cream */
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.final-cta .btn-primary {
+    background-color: #15616d;
+}
+
+.final-cta .btn-primary:hover {
+    background-color: #0d3d44;
+}
+
+/* =====================================================
+   13. FOOTER (Using Nicole's Exact Styles)
+   ===================================================== */
+
+footer {
+    background-color: #15616d; /* Teal Background */
+    color: #ffecd1;            /* Cream Text */
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 0;
+    font-family: 'EB Garamond', serif;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 25px;
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+}
+
+.footer-nav a {
+    color: #ffecd1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.copyright {
+    font-size: 13px;
+    border-top: 1px solid rgba(255, 236, 209, 0.2);
+    padding-top: 20px;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* =====================================================
+   14. CITATIONS
+   ===================================================== */
+
+.citations {
+    background-color: #f8f8f8;
+    padding: 60px 0;
+    font-size: 0.875rem;
+    color: #001524;
+    opacity: 0.7;
+}
+
+.citations h3 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.citations ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.citations li {
+    padding: 8px 0;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   15. RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.75rem; /* 44px */
+    }
+    
+    h2 {
+        font-size: 2rem; /* 32px */
+    }
+    
+    .comparison-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .option-cost {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+    
+    body {
+        font-size: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.25rem; /* 36px */
+    }
+    
+    h2 {
+        font-size: 1.75rem; /* 28px */
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .hero {
+        padding: 60px 0 40px 0;
+    }
+    
+    .nav-menu {
+        gap: 20px;
+        font-size: 0.75rem;
+    }
+    
+    .btn-header {
+        display: none; /* Hide header CTA on mobile, use sticky bottom CTA instead */
+    }
+    
+    .scenarios-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .qualification-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .scenario-box,
+    .qual-box,
+    .faq-item {
+        padding: 30px 25px;
+    }
+    
+    .btn-large {
+        font-size: 1.125rem;
+        padding: 20px 40px;
+    }
+    
+    .comparison-table {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.875rem; /* 30px */
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .logo {
+        font-size: 1.25rem;
+    }
+    
+    .nav-menu {
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 16px 30px;
+    }
+}
+
+/* =====================================================
+   16. UTILITY CLASSES
+   ===================================================== */
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
