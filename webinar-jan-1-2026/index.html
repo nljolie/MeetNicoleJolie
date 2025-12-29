@@ -29,86 +29,50 @@
             --cream: #ffecd1;
             --white: #ffffff;
             --orange: #ff6b35;
-            --orange-hover: #e85a2a;
-            --light-gray: #f7f8fa;
             --text-dark: #1a1a2e;
-            --text-medium: #444444;
             --radius: 16px;
-            --btn-radius: 8px;
-            --max-width: 1200px;
         }
 
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-dark); background: var(--white); overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-dark); background: var(--white); }
 
         header { padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
         .header-inner { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 900; font-size: 1.2rem; color: var(--navy); }
 
-        .hero { padding: 100px 0 60px; text-align: center; }
-        .hero h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; color: var(--navy); margin-bottom: 40px; }
+        .hero { padding: 80px 0 40px; text-align: center; }
+        .hero h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; color: var(--navy); margin-bottom: 20px; }
         
         .subheadline-callout {
             display: inline-block;
-            background: var(--light-gray);
+            background: #f7f8fa;
             border: 2px solid var(--teal);
             border-radius: var(--radius);
             padding: 30px 40px;
             max-width: 900px;
-            box-shadow: 0 10px 30px rgba(21, 97, 109, 0.1);
+            margin-bottom: 60px;
         }
-        .subheadline-callout h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--text-medium);
-            line-height: 1.5;
-        }
-        .subheadline-callout span { color: var(--teal); font-weight: 800; }
 
-        .split-section { padding: 80px 0; background: var(--white); }
         .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-        
         .who-is-it-for h3 { font-size: 2rem; margin-bottom: 20px; color: var(--navy); }
         .qual-list { list-style: none; }
         .qual-list li { padding: 15px 0 15px 40px; position: relative; border-bottom: 1px solid #eee; }
-        .qual-list li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 900; font-size: 1.2rem; }
+        .qual-list li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 900; }
         
-        .cta-box { background: var(--navy); color: var(--white); padding: 50px; border-radius: var(--radius); position: sticky; top: 120px; }
-        .cta-box h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--cream); }
-        .cta-box p { margin-bottom: 25px; opacity: 0.9; }
-        
-        .btn-main {
-            display: block;
-            width: 100%;
-            background: var(--orange);
-            color: var(--white);
-            text-align: center;
-            padding: 20px;
-            border-radius: var(--btn-radius);
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-            cursor: pointer;
-            border: none;
-            font-size: 1.1rem;
+        .cta-box { 
+            background: var(--navy); 
+            color: var(--white); 
+            padding: 40px; 
+            border-radius: var(--radius); 
+            position: sticky; 
+            top: 40px; 
         }
-        .btn-main:hover { background: var(--orange-hover); transform: translateY(-3px); }
-
-        .faq-section { background: var(--light-gray); padding: 80px 0; }
-        .faq-grid { max-width: 900px; margin: 40px auto 0; }
-        .faq-item { background: white; padding: 30px; border-radius: 12px; margin-bottom: 20px; border-left: 5px solid var(--teal); }
-        .faq-item h4 { margin-bottom: 10px; color: var(--navy); }
-
-        .citations { padding: 40px 0; font-size: 0.85rem; color: #777; border-top: 1px solid #ddd; }
-        .citations ul { list-style: none; margin-top: 10px; }
-
-        footer { background: var(--teal); padding: 60px 40px; text-align: center; }
-        .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px 30px; max-width: 1000px; margin: 0 auto 30px; padding-bottom: 30px; border-bottom: 1px solid rgba(255,236,209,0.2); }
-        .footer-links a { color: var(--orange); font-size: 0.9rem; text-decoration: none; }
-        .footer-links a:hover { color: var(--white); }
-        .copyright { font-size: 0.85rem; color: var(--cream); opacity: 0.8; }
+        .cta-box h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--cream); text-align: center; }
+        .cta-box p { margin-bottom: 25px; opacity: 0.9; text-align: center; }
+        
+        /* Overriding MailerLite Button to match your theme */
+        .ml-form-embedSubmit { background-color: var(--orange) !important; border: none !important; font-weight: 800 !important; }
     </style>
 </head>
 <body>
@@ -123,82 +87,39 @@
     </div>
 </header>
 
-<section class="hero container">
-    <h1>The 2026 AI Visibility Blueprint: How to Make "Answer Engines" Recommend Your Business Above Everyone Else</h1>
-    <div class="subheadline-callout">
-        <h2><span>The End of SEO:</span> Most businesses will lose the AI Trust Game because they are invisible to systems like Gemini and Atlas. I will show you why AI is skipping your brand—and the 3 "Trust Signals" you can fix in 24 hours.</h2>
+<section class="container">
+    <div class="hero">
+        <h1>The 2026 AI Visibility Blueprint</h1>
+        <div class="subheadline-callout">
+            <h2>The End of SEO: I will show you why AI is skipping your brand—and the 3 "Trust Signals" you can fix in 24 hours.</h2>
+        </div>
     </div>
-</section>
 
-<section class="split-section container">
     <div class="split-grid">
         <div class="who-is-it-for">
             <h3>Who Is This For?</h3>
             <ul class="qual-list">
-                <li><strong>High-Ticket Founders:</strong> You have $100k+ deals on the line and realize that if AI skips you once, it’s a catastrophic revenue leak.</li>
-                <li><strong>Growing Small Businesses:</strong> You want to use the same "Trust Architect" strategies that giant companies use to dominate their niche.</li>
-                <li><strong>The Tired SEO Marketer:</strong> You're ready to stop guessing keywords and start building a verifiable authority that AI citations demand.</li>
-                <li><strong>The Ambitious "Mom & Pop":</strong> You're invited to see how the big players stay recommended—and how to steal their playbook.</li>
+                <li><strong>High-Ticket Founders:</strong> You realize that if AI skips you once, it’s a catastrophic revenue leak. [cite: 525, 532]</li>
+                <li><strong>Growing Small Businesses:</strong> You want to use the same "Trust Architect" strategies that giant companies use. [cite: 560, 561]</li>
+                <li><strong>The Tired Marketer:</strong> You're ready to start building the verifiable authority that AI citations demand. [cite: 741, 743]</li>
             </ul>
         </div>
         
         <div class="cta-box">
             <h3>Reserve Your Spot</h3>
-            <p>Join the Live Q&A and get the 3-step fix to move your business from "Found" to "Recommended". No technical jargon, just revenue recovery.</p>
-            <button class="btn-main" onclick="ml('show', 'Rocdhf', true)">RESERVE MY SPOT</button>
+            <p>Enter your details below to register and download the AI Trust Manifesto. [cite: 896]</p>
+            
+            <div class="ml-embedded" data-form="3wDG8O"></div>
             <p style="font-size: 0.8rem; margin-top: 15px; text-align: center; opacity: 0.6;">45-Min Sessions + Live Q&A</p>
         </div>
     </div>
 </section>
 
-<section class="faq-section">
-    <div class="container">
-        <h3 style="text-align: center; font-size: 2rem;">Common Questions</h3>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <h4>How is "Recommendability" different from SEO?</h4>
-                <p>Traditional SEO gets you found by links; Recommendability gets you suggested by AI agents as the objective solution.</p>
-            </div>
-            <div class="faq-item">
-                <h4>I’m a small business; can I actually compete?</h4>
-                <p>AI search is the "Great Leveling." It prioritizes factual consistency over ad budgets. Small players can win if their trust signals are tight.</p>
-            </div>
-            <div class="faq-item">
-                <h4>What is an "AI Trust Signal"?</h4>
-                <p>It's a verifiable reference across the web (LinkedIn, News, Industry Sites) that confirms your business is exactly who it says it is.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="citations container">
-    <h4>Authority Sources & Citations</h4>
-    <ul>
-        <li>Larry Page (2000): The future of AI as the ultimate version of search. </li>
-        [<li>A16Z Research: The shift from software spend ($400B) to labor spend ($13T). </li>
-        <li>The Compound Rule: 1% daily improvement leads to 3,700% annual gain. </li>
-        <li>The Academic Principle: Citation-based trust in the Age of Agency.</li>
-    </ul>
-</section>
-
 <footer>
-        <div class="footer-links">
-            <a href="https://meetnicolejolie.com/#top">Home</a>
-            <a href="https://meetnicolejolie.com/#about">About</a>
-            <a href="https://meetnicolejolie.com/affiliate-disclaimer.html">Affiliate Disclaimer</a>
-            <a href="https://meetnicolejolie.com/anti-class-action.html">Anti-Class Action Provision</a>
-            <a href="https://meetnicolejolie.com/dmca-policy.html">DMCA Policy</a>
-            <a href="https://meetnicolejolie.com/earnings-results-disclaimer.html">Earnings & Results Disclaimer</a>
-            <a href="https://meetnicolejolie.com/gdpr-ccpa-policy.html">GDPR & CCPA Policy</a>
-            <a href="https://meetnicolejolie.com/legal-disclaimer.html">Legal Disclaimer</a>
-            <a href="https://meetnicolejolie.com/optin-agreement.html">Optin Agreement</a>
-            <a href="https://meetnicolejolie.com/privacy-policy.html">Privacy Policy</a>
-            <a href="https://meetnicolejolie.com/refund-policy.html">Refund Policy</a>
-            <a href="https://meetnicolejolie.com/terms-of-service.html">Terms of Service</a>
-            <a href="https://meetnicolejolie.com/testimonial-disclaimer.html">Testimonial Disclaimer</a>
-        </div>
-        <div class="copyright">&copy; 2025 Worthy of Success LLC. All rights reserved.</div>
-    </footer>
+    <div class="container" style="text-align:center; padding: 40px 0;">
+        <p>&copy; 2025 Worthy of Success LLC. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
