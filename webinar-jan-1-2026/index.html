@@ -25,29 +25,57 @@
     <style>
         :root { --navy: #001524; --teal: #15616d; --cream: #ffecd1; --white: #ffffff; --orange: #ff6b35; --text-dark: #1a1a2e; --radius: 16px; }
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-dark); background: var(--white); }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-dark); background: var(--white); -webkit-font-smoothing: antialiased; }
+        
         header { padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 900; font-size: 1.2rem; color: var(--navy); }
-        .hero { padding: 80px 0 40px; text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .logo { font-weight: 900; font-size: 1.2rem; color: var(--navy); text-transform: uppercase; }
+        
+        .hero { padding: 60px 0 30px; text-align: center; }
         .hero h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; color: var(--navy); margin-bottom: 20px; }
+        
         .subheadline-callout { display: inline-block; background: #f7f8fa; border: 2px solid var(--teal); border-radius: var(--radius); padding: 30px 40px; max-width: 900px; margin-bottom: 60px; }
-        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-bottom: 80px; }
+        .subheadline-callout h2 { font-size: 1.5rem; font-weight: 700; color: var(--teal); }
+
+        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-bottom: 80px; }
+        
         .who-is-it-for h3 { font-size: 2rem; margin-bottom: 20px; color: var(--navy); }
         .qual-list { list-style: none; }
         .qual-list li { padding: 15px 0 15px 40px; position: relative; border-bottom: 1px solid #eee; }
         .qual-list li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 900; }
-        .cta-box { background: var(--navy); color: var(--white); padding: 40px; border-radius: var(--radius); position: sticky; top: 40px; }
-        .cta-box h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--cream); text-align: center; }
+        
+        .cta-box { background: var(--navy); color: var(--white); padding: 40px; border-radius: var(--radius); position: sticky; top: 20px; }
+        .cta-box h3 { font-size: 1.8rem; margin-bottom: 20px; color: var(--cream); text-align: center; }
+        
         .faq-section { padding: 80px 0; background: #f9f9f9; }
         .faq-item { margin-bottom: 30px; }
-        .faq-item h4 { color: var(--navy); margin-bottom: 10px; font-size: 1.2rem; }
+        .faq-item h4 { color: var(--navy); margin-bottom: 10px; font-size: 1.2rem; font-weight: 800; }
+        
         .citations { padding: 40px 0; background: #eee; font-size: 0.85rem; color: #666; }
+        
         footer { background: var(--navy); color: white; padding: 60px 0; text-align: center; }
-        .footer-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; }
+        .footer-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; max-width: 900px; margin-left: auto; margin-right: auto; }
         .footer-grid a { color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.8; }
         .footer-grid a:hover { opacity: 1; color: var(--orange); }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 2.5rem; }
+            .split-grid { grid-template-columns: 1fr; gap: 40px; }
+            .cta-box { position: static; }
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 0 25px; }
+            .hero h1 { font-size: 2.2rem; }
+            .subheadline-callout { padding: 20px; }
+            .subheadline-callout h2 { font-size: 1.2rem; }
+            .header-inner { justify-content: center; text-align: center; }
+            .logo { width: 100%; }
+            .date-tag { font-size: 0.9rem; }
+            .cta-box { padding: 25px; }
+        }
     </style>
 </head>
 <body>
