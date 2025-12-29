@@ -23,56 +23,31 @@
     </script>
 
     <style>
-        :root {
-            --navy: #001524;
-            --teal: #15616d;
-            --cream: #ffecd1;
-            --white: #ffffff;
-            --orange: #ff6b35;
-            --text-dark: #1a1a2e;
-            --radius: 16px;
-        }
-
+        :root { --navy: #001524; --teal: #15616d; --cream: #ffecd1; --white: #ffffff; --orange: #ff6b35; --text-dark: #1a1a2e; --radius: 16px; }
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-dark); background: var(--white); }
-
         header { padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
         .header-inner { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 900; font-size: 1.2rem; color: var(--navy); }
-
         .hero { padding: 80px 0 40px; text-align: center; }
         .hero h1 { font-size: 3.5rem; font-weight: 900; line-height: 1.1; color: var(--navy); margin-bottom: 20px; }
-        
-        .subheadline-callout {
-            display: inline-block;
-            background: #f7f8fa;
-            border: 2px solid var(--teal);
-            border-radius: var(--radius);
-            padding: 30px 40px;
-            max-width: 900px;
-            margin-bottom: 60px;
-        }
-
-        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+        .subheadline-callout { display: inline-block; background: #f7f8fa; border: 2px solid var(--teal); border-radius: var(--radius); padding: 30px 40px; max-width: 900px; margin-bottom: 60px; }
+        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-bottom: 80px; }
         .who-is-it-for h3 { font-size: 2rem; margin-bottom: 20px; color: var(--navy); }
         .qual-list { list-style: none; }
         .qual-list li { padding: 15px 0 15px 40px; position: relative; border-bottom: 1px solid #eee; }
         .qual-list li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 900; }
-        
-        .cta-box { 
-            background: var(--navy); 
-            color: var(--white); 
-            padding: 40px; 
-            border-radius: var(--radius); 
-            position: sticky; 
-            top: 40px; 
-        }
+        .cta-box { background: var(--navy); color: var(--white); padding: 40px; border-radius: var(--radius); position: sticky; top: 40px; }
         .cta-box h3 { font-size: 1.8rem; margin-bottom: 15px; color: var(--cream); text-align: center; }
-        .cta-box p { margin-bottom: 25px; opacity: 0.9; text-align: center; }
-        
-        /* Overriding MailerLite Button to match your theme */
-        .ml-form-embedSubmit { background-color: var(--orange) !important; border: none !important; font-weight: 800 !important; }
+        .faq-section { padding: 80px 0; background: #f9f9f9; }
+        .faq-item { margin-bottom: 30px; }
+        .faq-item h4 { color: var(--navy); margin-bottom: 10px; font-size: 1.2rem; }
+        .citations { padding: 40px 0; background: #eee; font-size: 0.85rem; color: #666; }
+        footer { background: var(--navy); color: white; padding: 60px 0; text-align: center; }
+        .footer-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; }
+        .footer-grid a { color: white; text-decoration: none; font-size: 0.8rem; opacity: 0.8; }
+        .footer-grid a:hover { opacity: 1; color: var(--orange); }
     </style>
 </head>
 <body>
@@ -82,7 +57,7 @@
     <div class="container">
         <div class="header-inner">
             <div class="logo">NICOLE JOLIE</div>
-            <div class="date-tag">LIVE: JAN 1st @ 12PM CST</div>
+            <div class="date-tag" style="font-weight:700;">LIVE: JAN 1st @ 12PM CST</div>
         </div>
     </div>
 </header>
@@ -91,7 +66,7 @@
     <div class="hero">
         <h1>The 2026 AI Visibility Blueprint</h1>
         <div class="subheadline-callout">
-            <h2>The End of SEO: I will show you why AI is skipping your brand—and the 3 "Trust Signals" you can fix in 24 hours.</h2>
+            <h2>The End of SEO: I will show you why AI is skipping your brand and the 3 Trust Signals you can fix in 24 hours.</h2>
         </div>
     </div>
 
@@ -99,25 +74,66 @@
         <div class="who-is-it-for">
             <h3>Who Is This For?</h3>
             <ul class="qual-list">
-                <li><strong>High-Ticket Founders:</strong> You realize that if AI skips you once, it’s a catastrophic revenue leak. [cite: 525, 532]</li>
-                <li><strong>Growing Small Businesses:</strong> You want to use the same "Trust Architect" strategies that giant companies use. [cite: 560, 561]</li>
-                <li><strong>The Tired Marketer:</strong> You're ready to start building the verifiable authority that AI citations demand. [cite: 741, 743]</li>
+                <li><strong>The High-Value Service Founder:</strong> You have built your firm on expertise and a solid reputation, but you have realized that if AI skips you just once in a recommendation, your entire lead pipeline has an invisible hole in it.</li>
+                <li><strong>Chamber of Commerce Professionals:</strong> You are the local authority in the real world, but you are losing ground to big-box competitors because they have louder digital trust signals, not because they are better at the job.</li>
+                <li><strong>High-Growth Startups:</strong> You are ready to stop playing the SEO game and start building the verifiable authority and citations that AI engines demand to recommend you as the safe choice.</li>
+                <li><strong>The Recommended Expert:</strong> You want a defined roadmap to move your business from simply being found to being the primary, confident recommendation delivered by AI search.</li>
             </ul>
         </div>
         
         <div class="cta-box">
             <h3>Reserve Your Spot</h3>
-            <p>Enter your details below to register and download the AI Trust Manifesto. [cite: 896]</p>
-            
             <div class="ml-embedded" data-form="3wDG8O"></div>
             <p style="font-size: 0.8rem; margin-top: 15px; text-align: center; opacity: 0.6;">45-Min Sessions + Live Q&A</p>
         </div>
     </div>
 </section>
 
+<section class="faq-section">
+    <div class="container">
+        <h3 style="font-size: 2rem; margin-bottom: 40px; text-align: center; color: var(--navy);">Frequently Asked Questions</h3>
+        <div class="faq-item">
+            <h4>How do I know if AI is skipping my business?</h4>
+            <p>During the session, I will show you the exact search prompts to use to see if AI engines are recommending you or your competitors.</p>
+        </div>
+        <div class="faq-item">
+            <h4>How is this different from SEO?</h4>
+            <p>SEO is about ranking in a list of links. AI Visibility is about being the single, definitive answer the AI provides to a user.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Will there be a recording?</h4>
+            <p>Yes, all registered attendees will receive a 48 hour replay link along with the AI Trust Manifesto download.</p>
+        </div>
+    </div>
+</section>
+
+<section class="citations">
+    <div class="container">
+        <h4 style="margin-bottom: 10px;">Citations and Sources</h4>
+        <p>Gartner Research: B2B Enterprise buyer behavior and digital discovery patterns.</p>
+        <p>McKinsey & Company: Capital markets and advisory digital trends.</p>
+        <p>Bain & Company: B2B sales cycles and digital trust benchmarks.</p>
+    </div>
+</section>
+
 <footer>
-    <div class="container" style="text-align:center; padding: 40px 0;">
-        <p>&copy; 2025 Worthy of Success LLC. All rights reserved.</p>
+    <div class="container">
+        <div class="footer-grid">
+            <a href="https://meetnicolejolie.com">Home</a>
+            <a href="https://meetnicolejolie.com#about">About</a>
+            <a href="https://meetnicolejolie.com/affiliate-disclaimer.html">Affiliate Disclaimer</a>
+            <a href="https://meetnicolejolie.com/anti-class-action-jurisdiction-and-venue.html">Anti-Class Action</a>
+            <a href="https://meetnicolejolie.com/dmca-notice.html">DMCA Notice</a>
+            <a href="https://meetnicolejolie.com/earnings-disclaimer.html">Earnings Disclaimer</a>
+            <a href="https://meetnicolejolie.com/external-links-policy.html">External Links Policy</a>
+            <a href="https://meetnicolejolie.com/legal-disclaimer.html">Legal Disclaimer</a>
+            <a href="https://meetnicolejolie.com/privacy-policy.html">Privacy Policy</a>
+            <a href="https://meetnicolejolie.com/refund-policy.html">Refund Policy</a>
+            <a href="https://meetnicolejolie.com/sms-terms-and-conditions.html">SMS Terms</a>
+            <a href="https://meetnicolejolie.com/terms-of-service.html">Terms of Service</a>
+            <a href="https://meetnicolejolie.com/testimonials-disclosures.html">Testimonials</a>
+        </div>
+        <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2025 Worthy of Success LLC. All rights reserved.</p>
     </div>
 </footer>
 
